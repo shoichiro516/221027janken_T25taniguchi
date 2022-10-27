@@ -1,0 +1,1 @@
+# 221027janken_T25taniguchi
