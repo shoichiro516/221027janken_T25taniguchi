@@ -1,0 +1,173 @@
+<!-- 個人的なメモここから -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+ 
+//  var J1=7;
+//  if(J1==1 || J1==3 || J1==5)
+//  {alert("奇数はグー！")
+//  }else if(J1==2 || J1==4 || J1==6)
+//  {alert("偶数はチョキ！")
+//  }else if(J1==7 || J1==8 || J1==9)
+//  {alert("それ以外はパー")
+//  }
+
+var omi=Math.ceil(Math.random()*5);
+let view="";
+if(omi==1){
+    view="大吉";
+}
+if(omi==2){
+    view="中吉";
+}
+if(omi==3){
+    view="小吉";
+}
+if(omi==4){
+    view="末吉";
+}
+if(omi==5){
+    view="凶";
+}
+alert(view);
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん</title>
+</head>
+<body>
+    <header>
+        <h1>じゃんけん</h1>
+    </header>
+    <main>
+        
+    </main>
+        <ul>
+            <li id="gu_btn">グー</li>
+            <li id="cho_btn">チョキ</li>
+            <li id="par_btn">パー</li>
+        </ul>
+        <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+        <div id="judgement">勝ち</div>
+
+        <footer></footer>
+    <script>
+
+    </script>
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    function R_click(p_janken_r) {
+        let janken = ['グー','チョキ','パー'];
+        let janken_r = Math, floor( Math. random() * 3);
+
+        let p_janken = ['グー','チョキ','パー'];
+
+           if (janken_r === p_janken_r) {
+                Result_end = "あいこです";
+            }else if(p_janken__r === 0 && janken_r === 1) {
+                Result_end = "あなたの勝ち"; 
+            }else if(p_janken_r === 1 && janken_r === 2) {
+                Result_end = "あなたの勝ち";
+            }else if(p_janken_r === 2 && janken_r === 0) {
+                Result_end = "あなたの勝ち";
+            }else {
+                Result_end = "あなたの負け";
+            }
+
+            document.getElementById("jankenpon") .src="jan" + janken_r + ".jpeg";
+            document.getElementById("Rejan1").innerHTML = p_janken[p_janken__r] +"を選択しました。じゃんけんの結果は・・・？";
+            document.getElementById("Rejan2").innerHTML = "相手は" + janken[janken_r] + "を出しました";
+        
+        document.getElementById("jankenpon2").src="jan" + p_janken_r + ".jpeg";
+    }
+    </script>
+</head>
+
+<body>
+    <p><img id="jankenpon" src="image/goo.jpeg" width="100" height="100"  alt=""></p>
+    <button onclick="R_click(0);"> グー</button>    
+    <button onclick="R_click(1);"> チョキ</button>  
+    <button onclick="R_click(2);"> パー</button>
+
+    <p><img id="jankenpon2" src="image/jankenstart.jpeg" width="100" height="100" alt=""></p>
+    <div id="Rejan1"></div>
+    <div id="Rejan2"></div>
+</body>
+
+</html> -->
+
+<!-- 個人的なメモここまで -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん</title>
+    <script src="js/text.js"></script>
+    <style>
+        #res{
+            font-size: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>じゃんけん！</h1>
+    <h2>あなたの手を選んでください</h2>
+    <table>
+        <tr>
+            <td><img src="image/gu.jpeg" onclick="janken(0)"></td>
+            <td><img src="image/choki.jpeg" onclick="janken(1)"></td>
+            <td><img src="image/pa.jpeg" onclick="janken(2)"></td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>あなたの手</th>
+            <th>コンピュータの手</th>
+        </tr>
+        <tr>
+            <td><img src="" id="userImg"></td>
+            <td><img src="" id="pcImg"></td>
+        </tr>
+        <tr>
+            <td colspan="2" id="res">
+                    <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
